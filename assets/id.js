@@ -1,5 +1,10 @@
+const params = new URLSearchParams(window.location.search);
 
-var params = new URLSearchParams(window.location.search);
+// pomocnicza funkcja
+function get(name) {
+  return params.get(name) || "";
+}
+
 
 document.querySelector(".login").addEventListener('click', () => {
     toHome();
@@ -14,7 +19,7 @@ if (date.getHours() >= 18){
 document.querySelector(".welcome").innerHTML = welcome;
 
 function toHome(){
-    location.href = '/home?' + params;
+    location.href = 'home.html?' + params.toString();
 }
 
 var input = document.querySelector(".password_input");
@@ -70,4 +75,5 @@ eye.addEventListener('click', () => {
         classlist.add("eye_close");
         input.value = original;
     }
+
 })
