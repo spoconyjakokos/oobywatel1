@@ -9,3 +9,9 @@ document.querySelectorAll("[send]").forEach(el => {
         sendTo(el.getAttribute("send"));
     });
 });
+
+document.querySelectorAll(".back_text").forEach(el => {
+    el.addEventListener("click", () => {
+        sendTo("home");
+    });
+});
