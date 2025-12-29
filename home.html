@@ -58,4 +58,13 @@
     <script src="assets/bar.js"></script>
     <script src="assets/manifest.js"></script>
     <script src="assets/home.js"></script>
+    <script>
+const params = new URLSearchParams(window.location.search);
+
+function sendTo(page) {
+    location.href = page + ".html?" + params.toString();
+}
+</script>
+
 </body>
+
