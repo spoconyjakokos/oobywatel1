@@ -64,7 +64,13 @@ const params = new URLSearchParams(window.location.search);
 function sendTo(page) {
     location.href = page + ".html?" + params.toString();
 }
+document.querySelectorAll('.bottom_element_grid').forEach(el => {
+  el.addEventListener('click', () => {
+    sendTo(el.getAttribute('send'));
+  });
+});
 </script>
 
 </body>
+
 
