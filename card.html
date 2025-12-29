@@ -201,4 +201,19 @@
     <script src="assets/card.js?v=1.0"></script>
     <script src="assets/manifest.js"></script>
 <script src="assets/nav.js"></script>
+<script>
+const basePath = "/oobywatel1/"; 
+const params = new URLSearchParams(window.location.search);
+
+function sendTo(page) {
+    location.href = basePath + page + ".html?" + params.toString();
+}
+
+document.querySelectorAll('.bottom_element_grid').forEach(el => {
+  el.addEventListener('click', () => {
+    sendTo(el.getAttribute('send'));
+  });
+});
+</script>
 </body>
+
