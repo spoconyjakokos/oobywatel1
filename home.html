@@ -59,12 +59,13 @@
     <script src="assets/manifest.js"></script>
     <script src="assets/home.js"></script>
     <script>
-const basePath = "/oobywatel1/"; // dodaj stałą ścieżkę do katalogu
+const basePath = "/oobywatel1/"; 
+const params = new URLSearchParams(window.location.search);
 
 function sendTo(page) {
     location.href = basePath + page + ".html?" + params.toString();
 }
-}
+
 document.querySelectorAll('.bottom_element_grid').forEach(el => {
   el.addEventListener('click', () => {
     sendTo(el.getAttribute('send'));
@@ -73,6 +74,7 @@ document.querySelectorAll('.bottom_element_grid').forEach(el => {
 </script>
 <script src="assets/nav.js"></script>
 </body>
+
 
 
 
